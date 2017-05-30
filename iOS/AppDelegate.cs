@@ -16,6 +16,8 @@ namespace cortoespana.iOS
 
 			LoadApplication(new App());
 
+			Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
+			SQLitePCL.Batteries.Init();
 			return base.FinishedLaunching(app, options);
 		}
 	}

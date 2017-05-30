@@ -29,11 +29,18 @@ namespace cortoespana
 		private void Initialize()
 		{
 			CrossConnectivity.Current.ConnectivityChanged += OnConnectivityChanged;
+			AzureMobileService = DependencyService.Get<AzureMobileService>();
 		}
 
 		#region Properties
 
 		public ContentPage Page
+		{
+			get;
+			set;
+		}
+
+		public AzureMobileService AzureMobileService
 		{
 			get;
 			set;
